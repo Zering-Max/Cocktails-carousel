@@ -4,7 +4,7 @@
         <button class="carousel__nav carousel__next" @click.prevent="next">Suivant</button>
         <button class="carousel__nav carousel__prev" @click.prevent="prev">Précédent</button>
         <div class="carousel__pagination">
-            <button v-for="n in slidesCount" @click="goto(n-1)" :class="{active: n-1 == index}" ></button>
+            <button v-for="n in slidesCount" @click="goto(n-1)" :class="{active: n == index+1}" ></button>
         </div>
     </div>
 </template>
@@ -60,58 +60,7 @@ export default {
 }
 </script>
 
-<style >
+<style src="./carousel.css">
 
-.carousel{
-    position: relative
 
-}
-.carousel__nav{
-    position : absolute; 
-    border: none;
-    background-color : #000;
-    color: #fff;
-    cursor : pointer;
-    height:20px;
-    border-radius: 10px;
-}
-.carousel__nav:hover{
-    
-    background-color :#fff;
-    color: #000;
-    border:2px solid #000;
-    
-}
-.carousel__nav.carousel__prev{
-    top : 40%;
-    left: 26%;
-    right: auto;
-}
-.carousel__nav.carousel__next{
-    top:40%;
-    right: 26%;
-    left: auto;
-}
-
-.carousel__pagination{
-    position: absolute; 
-    bottom:20%;
-    left:0;
-    right:0;
-    text-align: center;
-}
-
-.carousel__pagination button {
-    display: inline-block;
-    width:10px;
-    height: 20px;
-    background-color: #000;
-    opacity: 0.8;
-    border-radius:10px;
-}
-
-.carousel__pagination button.active{
-    background-color: #fff;
-}
-    
 </style>
