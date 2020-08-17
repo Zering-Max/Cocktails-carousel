@@ -1,9 +1,6 @@
 <template>
     <transition :name="transition">
         <div v-show="visible">
-            
-            
-            
             <slot></slot>
         </div>
 
@@ -27,7 +24,7 @@ export default {
 }
 </script>
 
-<style lang="">
+<style>
 
 .slide-right-enter-active{
     animation:slideRightIn 1s;

@@ -31,9 +31,6 @@
 import Carousel from './components/carousel/Carousel'
 import CarouselSlide from './components/carousel/CarouselSlide'
 
-//import store from './store/CocktailsStore'
-const axios = require('axios');
-
 export default {
   data() {
     return {
@@ -72,12 +69,6 @@ export default {
             })
             
           })
-          
-          
-          
-          console.log(this.cocktails)
-          
-          
         })
     
     },
@@ -86,13 +77,7 @@ export default {
       console.log(filtered);
       return filtered;
     }
-    
-    
   },
-  computed :{
-    
-  },
-
   mounted(){
     
       let i = 97;
@@ -101,10 +86,7 @@ export default {
          this.letters.push(String.fromCharCode(k));
          console.log(this.letters);
       }
-  
-  
   }
-  
 }
 </script>
 
