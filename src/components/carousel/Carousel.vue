@@ -4,7 +4,7 @@
         <button class="carousel__nav carousel__next" @click.prevent="next">Suivant</button>
         <button class="carousel__nav carousel__prev" @click.prevent="prev">Précédent</button>
         <div class="carousel__pagination">
-            <button v-for="n in slidesCount" @click="goto(n-1)" :class="{active: n == index+1}" ></button>
+            <button v-for="n in slidesCount" @click="goto(n)" :class="{active: n == index+1}" v-bind:key="n" ></button>
         </div>
     </div>
 </template>
